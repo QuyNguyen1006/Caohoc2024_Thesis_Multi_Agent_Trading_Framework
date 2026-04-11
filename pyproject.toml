@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "multi-agent-trading-framework"
+version = "0.1.0"
+description = "Multi-Agent Trading Framework with LLMs and Knowledge Graphs"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    {name = "Nguyễn Thị Quý", email = "your.email@example.com"}
+]
+keywords = ["llm", "knowledge-graphs", "trading", "multi-agent", "finance"]
+
+dependencies = [
+    "pandas>=1.5.0",
+    "numpy>=1.23.0",
+    "torch>=2.0.0",
+    "langchain>=0.1.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "black>=23.0",
+    "flake8>=6.0",
+    "mypy>=1.0",
+    "jupyter>=1.0",
+    "ipython>=8.0",
+]
+
+[tool.black]
+line-length = 100
+target-version = ['py39']
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --cov=src --cov-report=html"
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false

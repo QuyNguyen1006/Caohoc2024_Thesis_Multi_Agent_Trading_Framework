@@ -1,0 +1,35 @@
+# Claude Code ignore file
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+.env
+.env.local
+.DS_Store
+*.log
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Large files
+*.zip
+*.tar.gz
+*.rar
+large_data/
+*.pickle
+*.pkl
+
+# Output files
+output/
+results/
+*.csv
